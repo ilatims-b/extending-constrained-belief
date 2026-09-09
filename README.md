@@ -185,13 +185,3 @@ Before running it:
 
 At the `num_tokens=2_000_000_000` scale used for the reference runs, this
 takes **around 9 hours on a Kaggle T4 GPU**.
-
-## Notes
-
-- If `epsilon_transformers` is also installed (editably) from another
-  checkout in the same Python environment, installing it from here will
-  point that environment's `epsilon_transformers` at this repo instead —
-  pip treats it as the same package name, so the most recent
-  `pip install -e .` wins. `train_mess_3_linear.py` also inserts this
-  repo's root onto `sys.path` at runtime as a belt-and-suspenders guard
-  against that ambiguity.
