@@ -1,0 +1,14 @@
+__pycache__/
+.venv/
+.vscode/
+build/
+poetry.lock
+*.h5
+**.egg-info/
+.mypy_cache/
+.pytest_cache
+**.env
+wandb/
+.DS_Store
+*.pt
+*.npy
