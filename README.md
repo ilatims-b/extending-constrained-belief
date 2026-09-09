@@ -185,3 +185,25 @@ Before running it:
 
 At the `num_tokens=2_000_000_000` scale used for the reference runs, this
 takes **around 9 hours on a Kaggle T4 GPU**.
+
+## LLM Usage Declaration
+
+Large language models (Claude 4.6, 5 High, Gemini 3 Pro) were used to assist with parts of this
+project's code (including performance optimization of the training and
+dataset-generation pipeline) and with drafting/editing portions of the
+accompanying report. Claude and Gemini also refined the heuristics established in the report. All methodology, experiments, and results were
+designed, run, and verified by the authors.
+
+## Citation
+
+If you find this work useful, please consider citing it:
+
+```bibtex
+@misc{bhandari2026extendingconstrainedbelief,
+  title  = {Extending Transformers Represent Constrained Belief Geometry in the Residual Stream},
+  author = {Bhandari, Smitali and V, Sriram and Chatterjee, Avishek},
+  year   = {2026},
+  note   = {Draft},
+  url    = {https://github.com/ilatims-b/extending-constrained-belief}
+}
+```
