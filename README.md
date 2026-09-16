@@ -11,6 +11,32 @@ Epsilon Machines (Hidden Markov Models) and analyzing their ability to learn
 statistical dependencies, focused on the Mess3 family of processes
 (`Mess3`, `Linear_Mess3`).
 
+## Key Findings
+
+1. **Linear beats full Bayesian, in the residual stream.** The transformer
+   tracks a *linear* belief update (each step just multiplies by a fixed
+   row-stochastic matrix) better than the exact, non-linear Bayesian
+   posterior. This holds across parameter regimes from near-identical to
+   substantially diverging updates.
+2. **MLP conjecture.** Attention alone only builds the zeroth + first-order
+   terms of the linear update; we conjecture the MLP supplies the missing
+   higher-order cross-terms that close the gap (empirical verification left
+   to future work).
+3. **Adam vs. SGD learn different geometry.** Same data, same architecture,
+   one extreme parameter point — SGD and Adam recover different simplexes.
+
+<p align="center">
+  <img src="figures/error_bound_and_linvsfull_combined.png" width="90%"><br>
+  <em>Fig. 1 : Error bound between linear & full Bayesian updates (A), and
+  the residual stream's empirical preference for the linear update (B).</em>
+</p>
+
+<p align="center">
+  <img src="figures/0.01_0.01/combined_simplex_comparison.png" width="90%"><br>
+  <em>Fig. 2 : Theoretical vs. recovered belief simplexes: SGD covers the
+  full simplex, Adam concentrates on the corners.</em>
+</p>
+
 ## Overview
 
 This project enables:
